@@ -18,3 +18,9 @@ resource "azurerm_resource_group" "rg" {
   name     = "myTFResourceGroup"
   location = "eastus"
 }
+
+resource "azurerm_data_factory" "adfbytf" {
+  name                = "adf-by-tf-0001"
+  location            = var.location
+  resource_group_name = var.rsgname
+}
